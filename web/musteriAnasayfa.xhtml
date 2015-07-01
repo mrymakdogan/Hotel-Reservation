@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+    <h:body >
+        <ui:composition template="/template/musteriTemplate.xhtml">
+            <ui:define name="content">
+                <h:outputLabel  style="height:10px; width:300px;font-size: 16px;font-style: italic;
+              ;color: #ece3a5"><center> #{adminBean.aciklama} </center> </h:outputLabel>
+
+                <h:panelGrid columns="4" style="top:130px;position: absolute;">
+                    <h:outputLabel value="seref " style=" visibility: hidden;"/>
+                    <h:graphicImage url="../images/ana1.jpg" style="border:2;border-color: #036fab;width:300px;height:500px;"/>
+                    <h:graphicImage url="../images/ana4.jpg" style="border:2;border-color: #036fab;width:300px;height:500px;"/>
+                    <h:graphicImage url="../images/ana3.jpg" style="border:2;border-color: #036fab;width:300px;height:500px;"/>          
+
+                </h:panelGrid>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            </ui:define>
+            <ui:define name="bottom" >
+                <h:outputLabel ><center> BU SİTE YAPIM ASAMASINDADIR</center> </h:outputLabel>               
+            </ui:define>
+        </ui:composition>
+    </h:body>
+
+</html>
+

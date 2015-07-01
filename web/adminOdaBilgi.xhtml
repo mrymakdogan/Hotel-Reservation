@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:form>
+        <h:body>
+            <ui:composition template="./template/adminTemplate.xhtml">
+                <ui:define name="content">                      
+                    <center>
+                        <div style="width:1000px;">
+                        <p:dataGrid value="#{adminOdaBean.oda}" var="eleman" columns="2" rows="6" paginator="true" 
+                                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {NextPageLink} {PreviousPageLink} {NextPageLink} {LastPageLink} "
+                                    style="width:200px;">
+                            <center>
+                            <h:graphicImage  url="#{eleman.durum}" /> 
+
+                            <f:facet name="header">
+                                Oda Hakkında Bilgiler
+                            </f:facet>
+
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <h:outputText value="Oda Durumu:" />
+                                <h:outputText value="#{eleman.odaDurumu}" style="font-weight: bold"/>
+
+                                <h:outputText value="Yatak Sayısı" />
+                                <h:outputText value="#{eleman.yatakSayisi}" style="font-weight: bold"/>
+
+                                <h:outputText value="Ucret" />
+                                <h:outputText value="#{eleman.ucret}" style="font-weight: bold"/>
+                            </h:panelGrid>
+                            </center>
+                        </p:dataGrid>
+                        </div>
+                    </center>
+                </ui:define>
+            </ui:composition>
+
+
+        </h:body>
+    </h:form>
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:form>
+        <h:body>
+            <ui:composition template="/template/musteriTemplate.xhtml">
+                <ui:define name="content">
+                    <p style="font-size: medium;text-align:center;color:#ffffff ">Hosgeldiniz Sayın #{userAd} #{userSoyad}   </p>
+                    <center>
+                        <h:panelGrid columns="2" style="color: #ffffff; font-style: normal; background-color: #2a8a8f; ;">
+
+                            <p:outputLabel  value="Giris Tarihi" />
+                            <p:calendar  value="#{rezervasyonBean.date1}" pattern="dd-MM-yyyy" mask="true" >
+
+                             
+                            </p:calendar>
+
+                            <p:outputLabel  value="Cikis Tarihi" />
+                            <p:calendar  value="#{rezervasyonBean.date2}" pattern="dd-MM-yyyy" mask="true" >
+
+                                 
+                            </p:calendar> 
+
+                            <p:outputLabel  value="Bos Oda No" />
+                            <p:selectManyMenu value="#{rezervasyonBean.bosoda}" >  
+
+                                
+                                <f:selectItems
+                                    value="#{rezervasyonBean.bosOda}"
+                                          var="eleman"
+                                   itemLabel="#{eleman.odaNo}"
+                                
+                                    itemValue="#{eleman.odaNo}"
+                                /> 
+                            </p:selectManyMenu> 
+
+                            <p:outputLabel value="Statü"/>
+
+
+                            <center>
+                                <h:outputLabel></h:outputLabel>
+                                <h:commandButton value="Rezervasyon Yap" action="#{rezervasyonBean.rezervasyonYap}" />
+                            </center>
+                            <br></br>
+                            <br></br>
+                        </h:panelGrid>
+                    </center>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </ui:define> 
+            </ui:composition>           
+
+
+            <div>TODO write content</div>
+        </h:body>
+    </h:form>    
+</html>

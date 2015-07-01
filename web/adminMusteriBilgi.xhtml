@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:form>
+        <h:body>
+            <ui:composition template="./template/adminTemplate.xhtml">
+                <ui:define name="content">                      
+                    <center>
+                        <p:dataTable var="liste" >
+                            <p:column headerText="ad">
+                                <h:outputText value="#{adminBean.musteriler}" />
+                            </p:column>
+
+                            <p:column headerText="oda">
+                                <h:outputText value="#{adminBean.oda}" />
+                            </p:column>
+
+
+                        </p:dataTable>
+                    </center>
+                </ui:define>
+            </ui:composition>
+
+
+        </h:body>
+    </h:form>
+</html>

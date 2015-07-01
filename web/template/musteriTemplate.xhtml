@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <h:outputStylesheet name="/css/styles.css"/>
+        <h:outputScript name="/js/script.js"/>  
+    </h:head>
+
+    <h:form>
+        <h:body style="background-color: #749EA1">
+
+            <div id="top">
+                <ui:insert name="top">
+                    <div id='cssmenu'>
+                        <ul>
+                            <li> <a style="visibility: hidden">ORTAYA YASLAMAYA CALISTIM AMA BIRAZ  asdasdasdasDAHA EKLEME YAPMALIYIM</a> </li>
+                            <li><a href='musteriAnasayfa.xhtml'><span>Otelimiz</span></a></li>
+                            <li><a href='musteriEglence.xhtml'><span>Eglence</span></a></li>
+                            <li><a href='musteriSpor.xhtml'><span>Spor</span></a></li>
+                            <li class='last'><a href='musteriIletisim.xhtml'><span>Iletisim</span></a></li>
+                            <li> <a style="visibility: hidden">ORTAYA YASLAMAYA CALISTIM </a> </li>
+
+
+                            <li>
+                                <img src="../images/reception.png" width="40" height="40" alt="24-512"/>
+
+                                <li><a href='musteriAdminLogin.xhtml'>Rezervasyon Yap</a></li>
+                                <li>
+                                <img src="../images/reception.png" width="40" height="40" alt="24-512"/>
+
+                                </li>
+                            </li>
+                        </ul>
+                    </div></ui:insert>
+            </div>
+            <div>
+                <div id="left">
+                    <ui:insert name="left">
+
+                        <h:panelGrid columns="1" style="top:100px;">
+                            <h:graphicImage url="/images/HS.png" style="width:300px;visibility:hidden "/>
+                            <h:graphicImage url="/images/HS.png" style=";width:180px"/>
+                        </h:panelGrid>
+
+                    </ui:insert>
+                </div>
+                <div>
+                    <div id="right">
+                        <ui:insert name="right">
+                            <h:panelGrid columns="1" style="top:100px;">
+                                <h:graphicImage url="/images/HS.png" style="width:300px;visibility:hidden "/>
+                                <h:graphicImage url="/images/HS.png" style="width:180px"/>
+                            </h:panelGrid>
+
+                        </ui:insert>
+                    </div>
+                    <div id="content" class="right_content" style="background-color: #749EA1">
+                        <ui:insert name="content">Content</ui:insert>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">
+                <ui:insert name="bottom"> <center>
+                        <p>2015-TUM HAKLARI SAKLIDIR -- WEB PROJE CALISMASI</p> </center></ui:insert>
+            </div>
+
+        </h:body>
+    </h:form>
+</html>
